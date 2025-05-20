@@ -14,11 +14,12 @@ Digiballot is a secure backend voting system built with Node.js, Express, and Mo
 
 ## Features
 
-- User sign up and login using **Aadhar Card Number** and password  
+- User sign up and login using **Aadhar Card Number** and **password** 
 - Users can view the list of candidates  
 - Users can vote for a candidate **only once**  
 - Admins can manage candidates (add, update, delete)  
 - Admins **cannot** vote  
+- Admins can see all the voters
 
 ---
 
@@ -88,6 +89,14 @@ Digiballot is a secure backend voting system built with Node.js, Express, and Mo
 |--------------------------|--------|-----------------------------|-----------|
 | /candidates/vote/count   | GET    | Get vote counts per candidate | Public    |
 | /candidates/vote/:candidateId | POST   | Vote for a candidate by ID    | User only |
+
+
+
+### Voters (Admin Only)
+
+| Endpoint  | Method | Description           | Access     |
+| --------- | ------ | --------------------- | ---------- |
+| users/voters   | GET    | Get list of all voters | Admin only |
 
 
 
